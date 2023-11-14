@@ -1,5 +1,5 @@
 {
-  "name": "package-a",
+  "name": "@bartlomiej-laczkowski/package-a",
   "version": "1.0.0",
   "scripts": {
     "test": "echo 'all tests passed!'"
