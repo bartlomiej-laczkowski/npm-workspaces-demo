@@ -16,6 +16,8 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: yarn
-      - run: yarn publish
+      - run: |
+          cd packages/package-a
+          yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
