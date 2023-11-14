@@ -4,5 +4,6 @@
   "scripts": {
     "test": "echo 'all tests passed!'"
   },
+  "repository":"https://github.com/bartlomiej-laczkowski/npm-workspaces-demo.git",
   "dependencies": {}
 }
