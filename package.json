@@ -1,5 +1,6 @@
 {
   "name": "npm-workspaces-demo",
+  "private": true,
   "version": "1.0.0",
   "author": "Ruan Martinelli",
   "license": "MIT",
