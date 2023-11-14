@@ -1,5 +1,5 @@
 {
-  "name": "@bartlomiej-laczkowski/package-a",
+  "name": "@npm-workspaces-demo/package-a",
   "version": "1.0.0",
   "scripts": {
     "test": "echo 'all tests passed!'"
