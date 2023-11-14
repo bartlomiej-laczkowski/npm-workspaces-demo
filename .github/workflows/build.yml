@@ -19,6 +19,6 @@ jobs:
       - run: yarn
       - run: |
           cd packages/package-a
-          yarn publish
+          yarn publish --registry https://npm.pkg.github.com/ --force
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
