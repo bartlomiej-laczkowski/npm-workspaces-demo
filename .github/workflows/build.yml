@@ -16,7 +16,6 @@ jobs:
           node-version: 12.22.1
           registry-url: https://npm.pkg.github.com/
           always-auth: true
-      - run: yarn
       - run: |
           cd packages/package-a
           yarn publish --registry https://npm.pkg.github.com/ --force
