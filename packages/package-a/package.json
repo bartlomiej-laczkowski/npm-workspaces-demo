@@ -6,5 +6,8 @@
   },
   "author": "bartek",
   "repository":"https://github.com/bartlomiej-laczkowski/npm-workspaces-demo.git",
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+	  "http.zip"
+  ]
 }
