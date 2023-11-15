@@ -1,5 +1,5 @@
 {
-  "name": "@theia/package-a",
+  "name": "@dummy/package-a",
   "version": "1.0.0",
   "scripts": {
     "test": "echo 'all tests passed!'"

@@ -5,6 +5,6 @@
     "test": "echo 'all tests passed!'"
   },
   "dependencies": {
-    "@theia/package-a": "1.0.0"
+    "@dummy/package-a": "1.0.0"
   }
 }
