@@ -19,7 +19,7 @@ jobs:
           npm install --global npm-cli-login
           WORKDIR="packages"
           TOKEN_CMD="npm-cli-login -u c0d3t0g3th3r -p cm132n4123j4kbnnbdcas -e info@codetogether.com -r https://npm.codetogether.io -s @codetogether"
-          BUILD_VERSION=${{ github.run_number }}
+          BUILD_NUMBER=${{ github.run_number }}
           cd "$WORKDIR"
           $TOKEN_CMD
           for d in */ ; do
