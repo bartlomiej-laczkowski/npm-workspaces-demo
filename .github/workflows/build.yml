@@ -18,10 +18,10 @@ jobs:
           always-auth: true
       - run: yarn
       - run: |
-          cd packages/package-a
           npm install --global npm-cli-login
           TOKEN_CMD="npm-cli-login -u c0d3t0g3th3r -p cm132n4123j4kbnnbdcas -e info@codetogether.com -r https://npm.codetogether.io -s @codetogether"
           $TOKEN_CMD
+          cd packages/package-a
           yarn publish --registry https://npm.codetogether.io --force --no-git-tag-version --new-version $PUB_VERSION
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
