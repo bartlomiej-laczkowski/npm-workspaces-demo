@@ -20,6 +20,6 @@ jobs:
       - run: |
           npm install --global npm-cli-login
           cd packages/package-a
-          yarn unpublish --registry https://npm.codetogether.io --force --no-git-tag-version
+          npm unpublish --registry https://npm.codetogether.io --force --no-git-tag-version
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
