@@ -14,15 +14,18 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 12.22.1
-          registry-url: https://npm.pkg.github.com/
-          always-auth: true
       - run: yarn
       - run: |
           npm install --global npm-cli-login
+          WORKDIR="packages"
           TOKEN_CMD="npm-cli-login -u c0d3t0g3th3r -p cm132n4123j4kbnnbdcas -e info@codetogether.com -r https://npm.codetogether.io -s @codetogether"
+          BUILD_VERSION=${{ github.run_number }}
+          cd "$WORKDIR"
           $TOKEN_CMD
-          cd packages/package-a
-          npm login
-          npm unpublish --registry https://npm.codetogether.io @dummy/package-a@1.0.0 --force
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          for d in */ ; do
+            echo "Working on $d"
+            ( cd "$d" &&
+              PUB_VERSION="2023.2.${BUILD_NUMBER}" &&
+              echo "Publish package version is: $PUB_VERSION" &&
+              yarn publish --registry https://npm.codetogether.io --force --no-git-tag-version --new-version $PUB_VERSION )
+          done

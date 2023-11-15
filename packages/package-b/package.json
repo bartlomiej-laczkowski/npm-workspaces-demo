@@ -1,9 +1,10 @@
 {
-  "name": "package-b",
+  "name": "@dummy/package-b",
   "version": "1.0.0",
   "scripts": {
     "test": "echo 'all tests passed!'"
   },
+  "author": "bartek",
   "dependencies": {
     "@dummy/package-a": "1.0.0"
   }
