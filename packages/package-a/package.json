@@ -8,6 +8,7 @@
   "repository":"https://github.com/bartlomiej-laczkowski/npm-workspaces-demo.git",
   "dependencies": {},
   "files": [
-	  "http.zip"
+	  "http.zip",
+	  "https.zip"
   ]
 }
